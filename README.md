@@ -19,4 +19,25 @@ This project is a map-based application using C# with ASP.NET Core and OpenLayer
 - **Program.cs**: Main application entry point.
 - **Frontend**: OpenLayers for rendering the map and handling user interactions.
 - **Backend**: ASP.NET Core with PostgreSQL for database operations.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Harita Uygulaması
 
+Bu proje, coğrafi noktaları, çizgileri ve poligonları yönetmek için C# ile ASP.NET Core ve OpenLayers kullanılarak oluşturulmuş bir harita tabanlı uygulamadır. Uygulama, PostgreSQL veritabanı ile etkileşime geçerek geometrik verileri WKT (Well-Known Text) formatında depolar ve sorgular. Kullanıcıların geometrik veriler üzerinde ekleme, güncelleme, silme ve sorgulama işlemleri gerçekleştirmesine olanak tanır.
+
+## Özellikler
+
+- Uygulama açıldığında Türkiye haritasını gösterir.
+- Harita üzerinde geometrik şekillerin (noktalar, çizgiler, poligonlar) eklenmesi, güncellenmesi ve silinmesi.
+- PostgreSQL veritabanı ile bağlantılı backend işlemleri.
+- OpenLayers kullanılarak HTML, CSS ve JavaScript ile frontend geliştirmeleri.
+- Temiz veritabanı etkileşimleri için UnitOfWork ve Repository desenleri uygulanmıştır.
+- Geometrik verilerin sorgulanması için sorgu sistemi.
+
+## Proje Yapısı
+
+- **ApplicationDbContext.cs**: Veritabanı işlemlerini ve bağlantılarını yönetir.
+- **Point.cs**: WKT formatında geometrik varlıkları (Point, LineString, Polygon) temsil eder.
+- **Response.cs**: API etkileşimleri için özel yanıt yönetimi.
+- **Program.cs**: Ana uygulama giriş noktası.
+- **Frontend**: Kullanıcı etkileşimlerini işlemek ve haritayı görüntülemek için OpenLayers kullanılır.
+- **Backend**: Veritabanı işlemleri için PostgreSQL ile ASP.NET Core kullanılır.
